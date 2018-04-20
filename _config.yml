@@ -1,0 +1,43 @@
+# Site Settings
+title: DreamCode | A team specialised in web/mobile and software developement and IT solutions
+email: dreamcodedz@gmail.com
+description: DreamCode Portfolio, blog and contact site
+baseurl: "/dreamcodedz.github.io" # the subpath of your site, e.g. /blog
+url: "https://dreamcodedz.github.io" # the base hostname & protocol for your site
+google_analytics: "UA-XXXXXXXX-X"
+
+# User Settings
+username: DreamCode
+user_description: Team of web/mobile and software developers. Offering there services. Staring and looking to bring value. And benifit the world around them. Technology is magic. We are playing magiciens.
+disqus_username: disqus_username
+
+# Social Media
+# Remove the item if you don't need it
+github_username: dreamcodedz
+facebook_username: facebook_username
+twitter_username: twitter_username
+instagram_username: instagram_username
+linkedin_username: linkedin_username
+medium_username: medium_username
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+permalink: /:title/
+
+# Plugins
+gems:
+  - jemoji
+
+# Links to include in menu navigation
+# For external links add external: true
+links:
+  - title: Home
+    url: /
+  - title: About
+    url: /about/
+  - title: Contact
+    url: /contact/
+
+# Exclude my node related stuff
+exclude: ['package.json', 'src', 'node_modules']
