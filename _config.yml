@@ -3,7 +3,7 @@ title: DreamCode | A team specialised in web/mobile and software developement an
 email: dreamcodedz@gmail.com
 description: DreamCode Portfolio, blog and contact site
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://dreamcodedz.github.io" # the base hostname & protocol for your site
+url: "" # the base hostname & protocol for your site
 google_analytics: "UA-XXXXXXXX-X"
 
 # User Settings
