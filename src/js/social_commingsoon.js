@@ -92,18 +92,50 @@ function removeElementFromArray_Mutate(sourceArray, elementsToRemoveArray) {
 var commingSoonEls = document.getElementsByClassName('social_commingSoon');
 
 (function () {
-
+    
     var popup = document.getElementById('socialComingSoonPopUp');
-    console.dir(popup);
-    addClass(popup, "hide");
+    
+    function hide() {
+        popup.className = 'hide';
+        setTimeout(function () {
+            popup.className = 'hidden';
+        }, 400);
+    }
 
-   console.dir(commingSoonEls);
+    function show() {
+        popup.className = 'hide';
+        setTimeout(function () {
+            popup.className = '';  
+        }, 20);
+    }
+
+    addClass(popup, "hidden");
+    
+    console.log('============+++>');
+console.dir(commingSoonEls[0]);
+    // we assign to first el (for a better animation start from it)
+    new Popper(commingSoonEls[0], popup, {
+        placement: 'top',
+        onCreate: function (data) {
+            console.log(data);
+        },
+        modifiers: {
+            flip: {
+                behavior: ['left', 'right', 'top', 'bottom']
+            },
+            offset: {
+                enabled: true,
+                offset: '0,10'
+            }
+        }
+    });
+
     for (var i = 0; i < commingSoonEls.length; i++) {
         commingSoonEls[i].addEventListener('click', function (evt) {
             evt.preventDefault();
             evt.stopPropagation();
             // show it 
-            popup.className = "";
+            show()
 
             var popper = new Popper(this, popup, {
                 placement: 'top',
@@ -138,7 +170,7 @@ console.log("damn a!!!!!!");
             }
         }
         if(!within) {
-            popup.className = 'hide';
+            hide();
         }
     });
 })();
