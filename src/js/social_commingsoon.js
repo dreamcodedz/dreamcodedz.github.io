@@ -158,20 +158,8 @@ console.log("damn a!!!!!!");
     console.dir(commingSoonEls);
     // hide when click outside
     document.addEventListener('click', function (evt) {
-        evt = getEvent(evt);
-        var target = getEventTarget(evt);
-        console.log("click ::::::::::::::::::");
-        console.dir(commingSoonEls);
-        var within = false;
-        for (var i = 0; i < commingSoonEls.length; i++) {
-            if (is_containedIn_OrEqual(target, commingSoonEls[i])) {
-                within = true;
-                break;
-            }
-        }
-        if(!within) {
+        //because of stop propagation in the other listners, it get executed only when the click is outside the elements
             hide();
-        }
     });
 })();
 
