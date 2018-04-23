@@ -4,6 +4,14 @@ layout: main
 
 
 <main class="home" id="post" role="main" itemprop="mainContentOfPage" itemscope="itemscope" itemtype="http://schema.org/Blog">
+    <div id="splash">
+        <div id="splash_title">Comming soon! <span
+            class="txt-rotate"
+            data-period="2000"
+            data-speed="150"
+            data-rotate='[ "stay toon!", "need our service Now?", "Call us!", "Contact us in Facebook.", "Tweeter.", "And don&apos;t forget to check out the site again, we have a lot to share!", "see ya!"]'></span></div>
+        <div class="overlay"></div>
+    </div>
     <div id="grid" class="row flex-grid">
     {% for post in site.posts %}
         <article class="box-item" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" itemprop="blogPost">

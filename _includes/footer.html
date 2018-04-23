@@ -16,17 +16,17 @@
       </a>
       {% endif %}
       {% if site.medium_username %}
-      <a itemprop="medium" href="https://medium.com/@{{ site.medium_username }}" title="Twitter">
+      <a class="social_commingSoon" itemprop="medium" href="https://medium.com/@{{ site.medium_username }}" title="medium">
         <svg><use xlink:href="#icon-medium"></use></svg>
       </a>
       {% endif %}
       {% if site.instagram_username %}
-      <a itemprop="instagram" href="https://www.instagram.com/{{ site.instagram_username }}" title="Instagram">
+      <a class="social_commingSoon" itemprop="instagram" href="https://www.instagram.com/{{ site.instagram_username }}" title="Instagram">
         <svg><use xlink:href="#icon-instagram"></use></svg>
       </a>
       {% endif %}
       {% if site.linkedin_username %}
-      <a itemprop="linkedin" href="https://www.linkedin.com/in/{{ site.linkedin_username }}" title="LinkedIn">
+      <a class="social_commingSoon" itemprop="linkedin" href="https://www.linkedin.com/in/{{ site.linkedin_username }}" title="LinkedIn">
         <svg><use xlink:href="#icon-linkedin"></use></svg>
       </a>
       {% endif %}
@@ -37,7 +37,12 @@
         {% endfor %}
         <li><a class="feed" href="{{ site.url }}{{site.baseurl}}/feed.xml" title="Atom/RSS feed">Feed</a></li>
     </ul>
-    <p><span>Jekflix</span> was made with <svg class="love"><use xlink:href="#icon-heart"></use></svg> by <a href="http://www.rossener.com" target="_blank" class="creator">Thiago Rossener</a></p>
+    <p><span>DreamCode</span>  with <svg class="love"><use xlink:href="#icon-heart"></use></svg> <span style="margin-left: 1em">@2018</span></p>
+    <div id="socialComingSoonPopUp">Comming soon! <span class="bottom-carret"></span>
+    </div>
 </footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper-utils.js"></script>
 <script src="{{ "/assets/js/main.js" | prepend: site.baseurl }}"></script>
 {% include stats.html %}

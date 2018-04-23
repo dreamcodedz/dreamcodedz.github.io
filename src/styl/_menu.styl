@@ -34,6 +34,7 @@ aside
     left rem(-240px)
     background-color accentDark
     z-index 20
+    border-right 1px solid gray
     +above(cut)
         padding rem(10px) 0 0
     &.open
@@ -42,8 +43,8 @@ aside
         margin 0 rem(20px) 0
         mainFont(400)
         font-size rem(18px)
-        color primaryDark
-        border-bottom 1px solid primaryDark
+        color #121288
+        border-bottom 1px solid #1212
         line-height 50px
         +above(cut)
             font-size rem(20px)
@@ -56,13 +57,15 @@ aside
         li
             margin 0
             list-style-type none
+            background #125487
+            border-bottom solid 1px #296999
             a
                 width 100%
                 display block
                 padding rem(15px) rem(20px)
                 text-decoration none
                 mainFont(300)
-                color primaryDark
+                color white
                 &:hover
-                    color accentDark
-                    background themeColor
+                    color white
+                    background #555589
